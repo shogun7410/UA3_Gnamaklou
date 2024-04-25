@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition d'un petit déjeuner équilibré</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page2">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <a href="composition.html">Composition</a>
+                    <ul class="dropdown">
+                        <li><a href="composition.html#petit-dejeuner">Petit déjeuner</a></li>
+                        <li><a href="composition.html#dejeuner">Déjeuner</a></li>
+                        <li><a href="composition.html#diner">Dîner</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <br><h1>Composez votre repas équilibré</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Faites votre choix</h2>
+            <form id="foodForm">
+                <label for="food1">Aliment 1 :</label>
+                <select name="food1" id="food1" onchange="updateFoodList('food1')">
+                    <option value="beurre_arachide">Beurre d'arachide</option>
+                    <option value="fromage">Fromage</option>
+                    <option value="noix">noix</option>
+                    <option value="houmous">houmous</option>
+                    <option value="creton à la viande">creton à la viande</option>
+                    <option value="lait">lait</option>
+                    <option value="pain">Pain</option>
+                    <option value="muffin">Muffin</option>
+                    <option value="bagel">bagel</option>
+                    <option value="gruau">gruau</option>
+                    <option value="céréales">céréales</option>
+                    <option value="banane">Banane</option>
+                    <option value="pomme">Pomme</option>
+                    <option value="orange">orange</option>
+                    <option value="raisins">raisins</option>
+                    <option value="compote">compote</option>
+                    <option value="tomate">tomate</option>
+                    <option value="asperge">asperge</option>
+                    <option value="fruits_séchés">fruits séchés</option>
+                 
+                </select><br><br>
+
+                <label for="food2">Aliment 2 :</label>
+                <select name="food2" id="food2" onchange="updateFoodList('food2')">
+                    <option value="beurre_arachide">Beurre d'arachide</option>
+                    <option value="fromage">Fromage</option>
+                    <option value="noix">noix</option>
+                    <option value="houmous">houmous</option>
+                    <option value="creton à la viande">creton à la viande</option>
+                    <option value="lait">lait</option>
+                    <option value="pain">Pain</option>
+                    <option value="muffin">Muffin</option>
+                    <option value="bagel">bagel</option>
+                    <option value="gruau">gruau</option>
+                    <option value="céréales">céréales</option>
+                    <option value="banane">Banane</option>
+                    <option value="pomme">Pomme</option>
+                    <option value="orange">orange</option>
+                    <option value="raisins">raisins</option>
+                    <option value="compote">compote</option>
+                    <option value="tomate">tomate</option>
+                    <option value="asperge">asperge</option>
+                    <option value="fruits_séchés">fruits séchés</option>
+                    
+                </select><br><br>
+
+                <label for="food3">Aliment 3 :</label>
+                <select name="food3" id="food3" onchange="updateFoodList('food3')">
+                    <option value="beurre_arachide">Beurre d'arachide</option>
+                    <option value="fromage">Fromage</option>
+                    <option value="noix">noix</option>
+                    <option value="houmous">houmous</option>
+                    <option value="creton à la viande">creton à la viande</option>
+                    <option value="lait">lait</option>
+                    <option value="pain">Pain</option>
+                    <option value="muffin">Muffin</option>
+                    <option value="bagel">bagel</option>
+                    <option value="gruau">gruau</option>
+                    <option value="céréales">céréales</option>
+                    <option value="banane">Banane</option>
+                    <option value="pomme">Pomme</option>
+                    <option value="orange">orange</option>
+                    <option value="raisins">raisins</option>
+                    <option value="compote">compote</option>
+                    <option value="tomate">tomate</option>
+                    <option value="asperge">asperge</option>
+                    <option value="fruits_séchés">fruits séchés</option>
+                 
+                </select><br><br>
+
+                <button type="button" onclick="checkBalance()">Vérifier l'équilibre</button>
+            </form>
+            <div id="foodLists"></div>
+            <p id="result"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Composition de repas équilibrés</p>
+    </footer>
+    <script src="script.js"></script>
+    <img id="animationImage" src="img/correct.gif" alt="Correct" style="display: none;">
+    <img id="animationImage" src="img/incorrect.gif" alt="Correct" style="display: none;">
+
+    <audio id="wrongSound" src="wrong.mp3"></audio>
+    <audio id="correctSound" src="correct.mp3"></audio>
+</body>
+</html>
